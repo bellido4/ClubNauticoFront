@@ -1,0 +1,30 @@
+<h2 style="text-align: center;">Listado de Barcos</h2>
+<table class="table table-dark">
+ <thead>
+ </thead>
+ <tbody>
+   <tr class="table-active">
+     <th>ID</th>
+     <th>HORA</th>
+     <th>FECHA</th>
+     <th>DESTINO</th>
+     <th>SOCIO</th>
+     <th>BARCO</th>
+     <th>PATRON</th>
+   </tr>
+   <tr *ngFor="let salida of salidas">
+     <td>{{salida.idSalida}}</td>
+     <td>{{salida.horaSalida}}</td>
+     <td>{{salida.fechaSalida}}</td>
+     <td>{{salida.destino}}</td>
+     <td>{{salida.socio}}</td>
+     <td>{{salida.barco}}</td>
+     <td>{{salida.patron}}</td>
+     <td>
+        <button type="submit" class="btn btn-primary ms-auto">Actualizar</button>
+        &nbsp;
+        <button type="submit" class="btn btn-primary ms-auto">Eliminar</button>
+      </td>
+   </tr>
+ </tbody>
+</table>

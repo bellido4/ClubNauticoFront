@@ -1,0 +1,26 @@
+   <h2 style="text-align: center;">Listado de Barcos</h2>
+   <table class="table table-dark">
+    <thead>
+    </thead>
+    <tbody>
+      <tr class="table-active">
+        <th>Matricula</th>
+        <th>Nombre</th>
+        <th>Numero de Amarre</th>
+        <th>Cuota</th>
+        <th>Acciones</th>
+      </tr>
+      <tr *ngFor="let barco of barcos">
+        <td>{{barco.nMatricula}}</td>
+        <td>{{barco.nombre}}</td>
+        <td>{{barco.nAmarre}}</td>
+        <td>{{barco.cuota}}</td>
+        <td>
+          <button type="submit" class="btn btn-primary ms-auto"><a href="/actualizar" style="text-decoration: none; color: inherit;">Actualizar</a></button>
+          &nbsp;
+          
+          <button type="submit" class="btn btn-primary ms-auto" (click)="deleteBarcos(barco.nMatricula)" (click)="showToast()">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
